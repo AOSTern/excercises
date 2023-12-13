@@ -1,3 +1,5 @@
+#Usage (digit,[number as digits in list],digit)
+
 def rebase(input_base, digits, output_base):
     if input_base < 2:
         raise ValueError("input base must be >= 2")
