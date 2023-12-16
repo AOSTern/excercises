@@ -7,8 +7,9 @@ def annotate(minefield):
     if minefield == [""]:
         return [""]
     for items in minefield:
-        if "X" in items:
-            raise ValueError("The board is invalid with current input.")
+        for char in items:
+            if char not in " *":
+                raise ValueError("The board is invalid with current input.")
     values = {"*": "1", " ": "0", "b": "0"}
     values_two = {"0": " "}
     count = 0
